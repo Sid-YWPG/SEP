@@ -3,9 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siddhant's SEP project</title>
-</head>
-<body bgcolor="lightyellow">
+    <title>Explaining Marxism</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+
+    /* Add custom styles here */
+    /* Full-screen image background */
+    .bg-image {
+        background-image: url('Fists.jpg'); /* Replace 'marxism_background.jpg' with your image file */
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* Set height to 100% of the viewport height */
+    }
+
+        /* Text shadow for navigation links */
+    .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .text-with-border {
+            -webkit-text-stroke: 1px black; /* Text stroke with 2px width and black color */
+            color: white; /* Text color */
+        }
+
+    /* Adjust padding on smaller screens */
+    @media (max-width: 768px) {
+        .nav-links {
+            padding-left: 4;
+            padding-right: 4;
+        }
+    }
     
+    @keyframes circleStroke {
+            0% {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0px 0px 0px rgba(33, 131, 0, 0.712); /* Start position */
+            }
+            50% {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(255, 0, 0, 0.7); /* Mid position */
+            }
+            100% {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0px 0px 0px rgba(4, 0, 255, 0.718); /* End position */
+            }
+        }
+
+    .text-with-border-glow {
+        animation: circleStroke 2s infinite; /* Animation duration and repetition */
+    }
+
+    /* Footer styles */
+    footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        /* About section styles */
+        .about-section {
+            position: fixed;
+            bottom: 60px; /* Space above footer */
+            right: 10px;
+            background-color: #FF004D;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: 1; /* Ensure about section is above the footer */
+        }
+
+    p {
+        padding: 10px;
+        text-align: justify;
+        }
+    </style>
+</head>
+<body class="font-sans leading-normal tracking-normal">
+
+    <!-- Full-screen image background -->
+    <div class="bg-image flex flex-col items-center justify-center">
+
+        <!-- Navigation -->
+        <nav class="py-4 text-white text-center sm:absolute sm:top-0 sm:left-0 sm:right-0">
+            <ul class="nav-links flex flex-col sm:flex-row justify-center sm:space-x-8 text">
+                <li><a href="selected-marxists.html" class="text-xl hover:text-gray-300 text-shadow">Selected Marxists</a></li>
+                <li><a href="library.html" class="text-xl hover:text-gray-300 text-shadow">Library</a></li>
+                <li><a href="subjects.html" class="text-xl hover:text-gray-300 text-shadow">Subjects</a></li>
+                <li><a href="dictionary.html" class="text-xl hover:text-gray-300 text-shadow">Dictionary</a></li>
+            </ul>
+        </nav>
+
+        <!-- Optional: Add a title or content in the center of the page -->
+        <div class="text-white text-center">
+            <h1 class="text-4xl font-bold mb-4 text-with-border text-with-border-glow" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Explaining Marxism</h1>
+            <p class="text-lg" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Marxism is a philosophy and method for scientific material analysis of the socio-economy. It is a doctrine for the liberation of the ploretariat.</p>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <p>Explaining Marxism. All rights reserved &copy;</p>
+    </footer>
+
+    <div class="about-section"><a href="about.html">
+        <p>About section</p></a>
+    </div>
+
 </body>
 </html>
